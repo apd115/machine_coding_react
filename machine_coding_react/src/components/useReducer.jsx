@@ -21,7 +21,7 @@ export const UseReducer = () => {
     ]
     
     //reducer function
-    initialState = {
+    const initialState = {
         cart: [],
     }
 
@@ -35,17 +35,19 @@ export const UseReducer = () => {
         case("REMOVE"):
           return{
             ...state,
-            cart : [ state.cart.filter((prod)=>{ prod.id !== action.payload.id })]
+            cart :  state.cart.filter((prod)=> prod.id !== action.payload.id )
           };
-        case("CLAER"):
+        case("CLEAR"):
         return{
             cart : []
         };
+        default: 
+         return state;
         
        }
     }
 
-    const[state, dispatch] = useReducer(initialState, prodReducer );
+    const[state, dispatch] = useReducer(prodReducer, initialState );
   return (
     
     <div>
@@ -56,7 +58,7 @@ export const UseReducer = () => {
                         <li key={item.id}>
                         {item.name}
                         </li>
-                    <button onclick={()=>{dispatch({type:"REMOVE", payload:item})}}>
+                    <button onClick={()=>{dispatch({type:"REMOVE", payload:item})}}>
                        REMOVE
                     </button>
                     </div>
