@@ -3,6 +3,7 @@ import { Accordian } from './components/accordian.jsx'
 import { UseRef } from './components/useRef.jsx'
 import { UseReducer } from './components/useReducer.jsx'
 import { UseMemo } from './components/useMemo.jsx'
+import { UseImperativeHandle } from './components/useImperativeHandle.jsx'
 
 function App() {
   
@@ -20,6 +21,10 @@ function App() {
     </div>
     <div>
       <UseMemo/>
+    </div>
+    <div>
+      <UseImperativeHandle/>
+      
     </div>
     
     </>
