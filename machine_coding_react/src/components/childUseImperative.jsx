@@ -17,7 +17,7 @@ export const ChildUseImperative = forwardRef((props, ref) => {
     <div>
         
         <input ref = {inputRef} type="text"/>
-        <h1>This is child component</h1>
+        
     </div>
   )
 })
