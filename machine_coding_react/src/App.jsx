@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Accordian } from './components/accordian.jsx'
 import { UseRef } from './components/useRef.jsx'
 import { UseReducer } from './components/useReducer.jsx'
+import { UseMemo } from './components/useMemo.jsx'
 
 function App() {
   
@@ -16,6 +17,9 @@ function App() {
     <div>
       <UseRef/>
       <UseReducer/>
+    </div>
+    <div>
+      <UseMemo/>
     </div>
     
     </>
